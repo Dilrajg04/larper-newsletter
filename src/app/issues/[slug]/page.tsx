@@ -70,11 +70,11 @@ export default async function IssuePage({ params }: Props) {
         <p className="text-xl text-zinc-600 leading-relaxed">
           {issue.description}
         </p>
-        <div className="flex flex-wrap gap-2 mt-5">
+        <div className="flex flex-wrap gap-1.5 mt-5">
           {issue.tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs font-mono text-zinc-500 bg-zinc-100 px-2.5 py-1 rounded"
+              className="text-xs font-mono px-2.5 py-1 rounded border bg-zinc-50 text-zinc-600 border-zinc-200"
             >
               {tag}
             </span>

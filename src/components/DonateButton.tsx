@@ -32,44 +32,46 @@ export default function DonateButton() {
   }
 
   return (
-    <section id="donate" className="border-t border-zinc-200 pt-10 pb-10">
-      <p className="text-sm font-mono uppercase tracking-widest text-amber-500 mb-3">
-        Keep it going
-      </p>
-      <h2 className="text-3xl font-black text-zinc-900 mb-3">
-        Help keep LARPER free
-      </h2>
-      <p className="text-zinc-600 text-base mb-7 leading-relaxed">
-        LARPER is written by students, for students. It costs nothing to read
-        and never will. If you find it useful, even a small contribution keeps
-        it running and independent.
-      </p>
-      <div className="flex gap-2 mb-3">
-        {AMOUNTS.map((amt) => (
-          <button
-            key={amt}
-            onClick={() => setSelected(amt)}
-            className={`flex-1 py-3 rounded-lg text-base font-bold border transition-all duration-200 ${
-              selected === amt
-                ? "bg-zinc-900 border-zinc-900 text-white"
-                : "bg-white border-zinc-300 text-zinc-600 hover:border-zinc-500 hover:text-zinc-900"
-            }`}
-          >
-            ${amt}
-          </button>
-        ))}
+    <section id="donate" className="pt-10 pb-10">
+      <div className="rounded-2xl p-8 h-full bg-white border-2 border-zinc-900">
+        <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-3">
+          Keep it going
+        </p>
+        <h2 className="text-2xl font-black text-zinc-900 mb-3">
+          Help keep LARPER free
+        </h2>
+        <p className="text-zinc-500 text-sm mb-7 leading-relaxed">
+          LARPER is written by students, for students. It costs nothing to read
+          and never will. If you find it useful, a small contribution keeps it
+          running and independent.
+        </p>
+        <div className="flex gap-2 mb-3">
+          {AMOUNTS.map((amt) => (
+            <button
+              key={amt}
+              onClick={() => setSelected(amt)}
+              className={`flex-1 py-2.5 rounded-lg text-sm font-bold border transition-all duration-200 ${
+                selected === amt
+                  ? "bg-zinc-900 border-zinc-900 text-white"
+                  : "bg-white border-zinc-300 text-zinc-500 hover:border-zinc-700 hover:text-zinc-900"
+              }`}
+            >
+              ${amt}
+            </button>
+          ))}
+        </div>
+        <button
+          onClick={handleDonate}
+          disabled={loading}
+          className="w-full bg-zinc-900 hover:bg-zinc-700 disabled:opacity-40 text-white font-black py-3 rounded-lg text-sm transition-colors duration-200"
+        >
+          {loading ? "Redirecting..." : `Donate $${selected} via Stripe`}
+        </button>
+        {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
+        <p className="text-zinc-400 text-xs mt-3 text-center">
+          One-time. No subscription. No pressure.
+        </p>
       </div>
-      <button
-        onClick={handleDonate}
-        disabled={loading}
-        className="w-full bg-zinc-900 hover:bg-zinc-700 disabled:opacity-40 text-white font-black py-3.5 rounded-lg text-base transition-colors duration-200"
-      >
-        {loading ? "Redirecting..." : `Donate $${selected} via Stripe`}
-      </button>
-      {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
-      <p className="text-zinc-500 text-sm mt-3 text-center">
-        One-time. No subscription. No pressure.
-      </p>
     </section>
   );
 }
