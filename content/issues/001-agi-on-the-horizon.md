@@ -5,6 +5,7 @@ date: "2026-04-07"
 issue: 1
 description: "Everyone's talking about AI, but what is it really? This week we break down the basics — what these models actually do, why they sometimes get things wrong, and what words like 'reasoning' and 'benchmark' actually mean."
 tags: ["beginner", "AI basics", "LLMs", "how it works"]
+coverImage: "/images/issues/001-cover.svg"
 buzzword:
   term: "Large Language Model (LLM)"
   definition: "An AI system trained on enormous amounts of text — think most of the internet — that learns to predict what word comes next. That's it. Everything you see ChatGPT or Claude do (answering questions, writing essays, writing code) comes from being really, really good at that one trick."

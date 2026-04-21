@@ -5,6 +5,7 @@ date: "2026-04-14"
 issue: 2
 description: "You've used AI to answer questions. But what happens when AI can take actions — browse the web, run code, send emails? This week we break down AI agents, what they're good at, and why they occasionally go off the rails."
 tags: ["agents", "automation", "beginner", "how it works"]
+coverImage: "/images/issues/002-cover.svg"
 buzzword:
   term: "AI Agent"
   definition: "An AI that doesn't just answer questions — it takes actions. Instead of you doing a task and the AI advising, an agent can browse websites, write and run code, send messages, or interact with apps on your behalf. Think of it like giving the AI hands, not just a voice."

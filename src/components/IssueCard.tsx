@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { IssueMeta } from "@/lib/issues";
 
 
@@ -16,6 +17,20 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
 
         {/* Left accent bar — appears on hover */}
         <div className="absolute left-0 top-8 bottom-8 w-0.5 rounded-full bg-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/* Cover image */}
+        {issue.coverImage && (
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-5 bg-zinc-100">
+            <Image
+              src={issue.coverImage}
+              alt={issue.title}
+              fill
+              unoptimized
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+        )}
 
         {/* Meta row */}
         <div className="flex items-center gap-2.5 mb-3">

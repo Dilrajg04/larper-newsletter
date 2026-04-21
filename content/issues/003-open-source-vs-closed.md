@@ -5,6 +5,7 @@ date: "2026-03-31"
 issue: 3
 description: "Some AI tools are free to download and inspect. Others are locked behind a paywall and kept secret. This week we explain the difference, why companies make different choices, and what it means for students building things with AI."
 tags: ["open source", "beginner", "Meta", "Llama", "getting started"]
+coverImage: "/images/issues/003-cover.svg"
 buzzword:
   term: "Open Source"
   definition: "Software where the underlying code is made public — anyone can read it, copy it, modify it, and use it. In AI, 'open source' usually means the model's weights (the numbers that make it work) are released for anyone to download and run. The opposite is 'closed source' or 'proprietary' — where the company keeps the code secret and you access the AI only through their website or API."

@@ -2,6 +2,7 @@ import { fetchHNStories, fetchGuardianNews, hnDomain, timeAgo } from "@/lib/news
 import { getAllIssues } from "@/lib/issues";
 import CopyButton from "./CopyButton";
 import SendIssueButton from "./SendIssueButton";
+import LogoutButton from "./LogoutButton";
 import Link from "next/link";
 
 export const revalidate = 1800;
@@ -25,9 +26,12 @@ export default async function AdminPage() {
           <h1 className="text-3xl font-black text-zinc-900 tracking-tight">LARPER Dashboard</h1>
           <p className="text-zinc-500 text-sm mt-1">Send issues, browse stories, write the next one.</p>
         </div>
-        <Link href="/" className="text-sm font-mono text-zinc-400 hover:text-zinc-900 transition-colors">
-          ← Back to site
-        </Link>
+        <div className="flex items-center gap-5">
+          <Link href="/" className="text-sm font-mono text-zinc-400 hover:text-zinc-900 transition-colors">
+            ← Back to site
+          </Link>
+          <LogoutButton />
+        </div>
       </div>
 
       {/* ── Send Issues ── */}

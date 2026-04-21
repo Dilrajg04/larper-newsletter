@@ -1,0 +1,71 @@
+<!--
+  LARPER Cover Image Template
+  ===========================
+  Dimensions:  1200 × 630
+  Left margin: x="90" for all left-side text/elements
+  Background:  very light gray gradient (fafafa → f4f4f5) or tinted variant
+  Accent:      #10b981 (emerald) — divider bar, buzzword pill, diagram accents
+  Text colors: #18181b (titles), #71717a (subtitle/body), #a1a1aa (mono labels/date)
+  Pill text:   fill="#059669", background fill="#10b981" fill-opacity="0.1"
+
+  Left column (content):
+    - LARPER label     y≈100  monospace 13px #10b981 letter-spacing:3
+    - Title line 1     y≈210  sans-serif 78-88px black #18181b tracking:-3
+    - Title line 2     y≈300  same
+    - Emerald divider  y≈330  rect width=60 height=3 rx=1.5 fill=#10b981
+    - Subtitle         y≈380  sans-serif 20-22px #71717a
+    - Buzzword pill    y≈430  rect rx=19 + centered monospace text
+    - Date             y≈586  monospace 13px #a1a1aa
+
+  Right column (diagram):
+    - Starts around x=740-780, decorative visual relevant to the issue topic
+    - White card: fill="white" stroke="#e4e4e7" stroke-width="1.5" rx="16"
+    - Use emerald (#10b981) as the diagram accent color
+
+  Rules:
+    - No watermark issue number
+    - No large background numbers
+    - Keep right-side diagrams to x > 740 so they don't overlap left content
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fafafa"/>
+      <stop offset="100%" style="stop-color:#f4f4f5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT COLUMN: replace with issue-specific diagram (x > 740) -->
+  <!-- ============================================================ -->
+  <rect x="740" y="100" width="400" height="420" rx="16" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+  <!-- diagram content here -->
+
+  <!-- ============================================================ -->
+  <!-- LEFT COLUMN: update text values, keep x="90" and structure  -->
+  <!-- ============================================================ -->
+
+  <!-- LARPER label -->
+  <text x="90" y="100" font-family="monospace" font-size="13" font-weight="700" fill="#10b981" letter-spacing="3">LARPER</text>
+
+  <!-- Title -->
+  <text x="90" y="210" font-family="sans-serif" font-size="84" font-weight="900" fill="#18181b" letter-spacing="-3">Title Line</text>
+  <text x="90" y="306" font-family="sans-serif" font-size="84" font-weight="900" fill="#18181b" letter-spacing="-3">Goes Here</text>
+
+  <!-- Emerald divider bar -->
+  <rect x="90" y="338" width="60" height="3" rx="1.5" fill="#10b981"/>
+
+  <!-- Subtitle -->
+  <text x="90" y="387" font-family="sans-serif" font-size="22" fill="#71717a">One-line subtitle for the issue.</text>
+
+  <!-- Buzzword pill (adjust width to fit text; center x = pill_x + pill_width/2) -->
+  <rect x="90" y="420" width="220" height="38" rx="19" fill="#10b981" fill-opacity="0.1"/>
+  <text x="200" y="444" font-family="monospace" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Buzzword: Term</text>
+
+  <!-- Date -->
+  <text x="90" y="586" font-family="monospace" font-size="13" fill="#a1a1aa">Month DD, YYYY</text>
+</svg>

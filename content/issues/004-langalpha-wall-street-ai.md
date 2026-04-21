@@ -5,6 +5,7 @@ date: "2026-04-14"
 issue: 4
 description: "A new project called LangAlpha just showed up on Hacker News with a big question: what would an AI coding assistant look like if it was designed specifically for finance? We break down what that means, why it's hard, and why students should pay attention."
 tags: ["finance", "AI tools", "quantitative", "LangAlpha", "Show HN"]
+coverImage: "/images/issues/004-cover.svg"
 buzzword:
   term: "Quantitative Analyst (Quant)"
   definition: "A person who uses math, statistics, and programming to make financial decisions — instead of gut instinct or traditional analysis. Quants write code that analyzes market data, finds patterns, and sometimes executes trades automatically. Think of it as the overlap between computer science and finance. You don't need to know what a stock is to be a quant — you need to know how to model data."

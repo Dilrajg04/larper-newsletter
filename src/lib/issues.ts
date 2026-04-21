@@ -20,6 +20,7 @@ export interface Issue {
   description: string;
   tags: string[];
   buzzword: Buzzword;
+  coverImage?: string;
   contentHtml: string;
 }
 
@@ -31,6 +32,7 @@ export interface IssueMeta {
   description: string;
   tags: string[];
   buzzword: Buzzword;
+  coverImage?: string;
 }
 
 export function getAllIssues(): IssueMeta[] {
