@@ -41,7 +41,18 @@ export default function RootLayout({
         <footer className="border-t border-zinc-200 py-8 mt-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500 font-mono">
             <span>LARPER &copy; {new Date().getFullYear()}. AI &amp; tech explained for students.</span>
-            <span>Built with Next.js &amp; caffeine.</span>
+            <div className="flex items-center gap-3">
+              <span>Created by Dilraj Grewal</span>
+              <span className="text-zinc-300">·</span>
+              <a
+                href="https://www.linkedin.com/in/dilraj-singh-grewal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-emerald-600 hover:text-emerald-700 transition-colors"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
           </div>
         </footer>
       </body>

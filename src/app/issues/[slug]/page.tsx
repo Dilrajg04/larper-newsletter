@@ -1,6 +1,7 @@
 import { getIssueBySlug, getAllSlugs } from "@/lib/issues";
 import BuzzwordSpotlight from "@/components/BuzzwordSpotlight";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
@@ -57,6 +58,20 @@ export default async function IssuePage({ params }: Props) {
 
       {/* Header — full width */}
       <header className="mb-10 animate-slide-up">
+        {issue.coverImage && (
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-8 bg-zinc-100">
+            <Image
+              src={issue.coverImage}
+              alt={issue.title}
+              fill
+              priority
+              unoptimized
+              className="object-cover scale-[1.1]"
+              sizes="(max-width: 1280px) 100vw, 1200px"
+            />
+          </div>
+        )}
+
         <div className="flex items-center gap-3 mb-5">
           <span className="text-sm font-mono text-emerald-600">
             Issue #{String(issue.issue).padStart(3, "0")}

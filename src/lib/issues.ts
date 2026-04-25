@@ -21,6 +21,7 @@ export interface Issue {
   tags: string[];
   buzzword: Buzzword;
   coverImage?: string;
+  shortTitle?: string;
   contentHtml: string;
 }
 
@@ -33,6 +34,7 @@ export interface IssueMeta {
   tags: string[];
   buzzword: Buzzword;
   coverImage?: string;
+  shortTitle?: string;
 }
 
 export function getAllIssues(): IssueMeta[] {

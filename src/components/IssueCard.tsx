@@ -18,19 +18,26 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
         {/* Left accent bar — appears on hover */}
         <div className="absolute left-0 top-8 bottom-8 w-0.5 rounded-full bg-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-        {/* Cover image with issue number */}
+        {/* Cover image with topic label */}
         {issue.coverImage && (
-          <div className="flex items-center gap-5 mb-5">
-            <span className="shrink-0 text-[clamp(3rem,6vw,5rem)] font-black text-emerald-500 leading-none tabular-nums select-none">
-              {String(issue.issue).padStart(3, "0")}
-            </span>
+          <div className="flex items-start gap-5 mb-5">
+            {issue.shortTitle && (
+              <div className="shrink-0 w-28 pt-1">
+                <span className="text-xs font-mono font-bold text-emerald-600 uppercase tracking-widest block mb-1">
+                  #{String(issue.issue).padStart(3, "0")}
+                </span>
+                <p className="text-2xl font-black text-zinc-900 leading-tight">
+                  {issue.shortTitle}
+                </p>
+              </div>
+            )}
             <div className="relative flex-1 aspect-[4/3] rounded-xl overflow-hidden bg-zinc-100 shadow-sm">
               <Image
                 src={issue.coverImage}
                 alt={issue.title}
                 fill
                 unoptimized
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                className="object-cover scale-[1.1] transition-transform duration-500 group-hover:scale-[1.13]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

@@ -27,20 +27,8 @@
   <line x1="420" y1="360" x2="780" y2="315" stroke="#d4d4d8" stroke-width="1.5" stroke-dasharray="6,4"/>
   <text x="785" y="319" font-family="monospace" font-size="10" fill="#a1a1aa">market</text>
 
-  <polyline
-    points="420,390 495,355 570,310 645,260 720,205 780,162"
-    fill="none"
-    stroke="#10b981"
-    stroke-width="2.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-
-  <polygon
-    points="420,390 495,355 570,310 645,260 720,205 780,162 780,420 420,420"
-    fill="#10b981"
-    fill-opacity="0.06"
-  />
+  <polyline points="420,390 495,355 570,310 645,260 720,205 780,162" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="420,390 495,355 570,310 645,260 720,205 780,162 780,420 420,420" fill="#10b981" fill-opacity="0.06"/>
 
   <circle cx="420" cy="390" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
   <circle cx="495" cy="355" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
