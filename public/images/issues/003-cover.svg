@@ -6,54 +6,29 @@
     </linearGradient>
   </defs>
 
-  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Split visual — right side, two contrasting panels -->
-  <!-- Open panel (left half of visual) -->
-  <rect x="750" y="100" width="190" height="440" rx="16" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
-  <text x="845" y="145" font-family="monospace" font-size="11" fill="#a1a1aa" text-anchor="middle" letter-spacing="2">OPEN</text>
-  <!-- Open lock icon (simplified) -->
-  <rect x="810" y="195" width="70" height="55" rx="8" fill="none" stroke="#10b981" stroke-width="2.5"/>
-  <path d="M 830 195 Q 830 155 845 155 Q 865 155 865 175" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="845" cy="228" r="6" fill="#10b981"/>
-  <!-- "Anyone can use it" items -->
-  <text x="845" y="298" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ Free to use</text>
-  <text x="845" y="320" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ See the code</text>
-  <text x="845" y="342" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ Modify it</text>
-  <text x="845" y="364" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ Run locally</text>
-  <!-- Example: Llama -->
-  <rect x="794" y="390" width="102" height="30" rx="8" fill="#f0fdf4"/>
-  <text x="845" y="410" font-family="monospace" font-size="11" fill="#059669" text-anchor="middle" font-weight="700">e.g. Llama</text>
+  <rect x="400" y="95" width="190" height="440" rx="16" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+  <text x="495" y="140" font-family="monospace" font-size="11" fill="#a1a1aa" text-anchor="middle" letter-spacing="2">OPEN</text>
+  <rect x="460" y="190" width="70" height="55" rx="8" fill="none" stroke="#10b981" stroke-width="2.5"/>
+  <path d="M 480 190 Q 480 150 495 150 Q 515 150 515 170" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="495" cy="223" r="6" fill="#10b981"/>
+  <text x="495" y="293" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ Free to use</text>
+  <text x="495" y="315" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ See the code</text>
+  <text x="495" y="337" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ Modify it</text>
+  <text x="495" y="359" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle">✓ Run locally</text>
+  <rect x="444" y="385" width="102" height="30" rx="8" fill="#f0fdf4"/>
+  <text x="495" y="405" font-family="monospace" font-size="11" fill="#059669" text-anchor="middle" font-weight="700">e.g. Llama</text>
 
-  <!-- Closed panel (right half of visual) -->
-  <rect x="960" y="100" width="190" height="440" rx="16" fill="#18181b"/>
-  <text x="1055" y="145" font-family="monospace" font-size="11" fill="#52525b" text-anchor="middle" letter-spacing="2">CLOSED</text>
-  <!-- Closed lock icon (simplified) -->
-  <rect x="1020" y="195" width="70" height="55" rx="8" fill="none" stroke="#71717a" stroke-width="2.5"/>
-  <path d="M 1040 195 Q 1040 155 1055 155 Q 1075 155 1075 195" fill="none" stroke="#71717a" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="1055" cy="228" r="6" fill="#71717a"/>
-  <!-- "Restricted" items -->
-  <text x="1055" y="298" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ API only</text>
-  <text x="1055" y="320" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ No weights</text>
-  <text x="1055" y="342" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ Pay to use</text>
-  <text x="1055" y="364" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ Black box</text>
-  <!-- Example: GPT-4 -->
-  <rect x="1004" y="390" width="102" height="30" rx="8" fill="#27272a"/>
-  <text x="1055" y="410" font-family="monospace" font-size="11" fill="#a1a1aa" text-anchor="middle" font-weight="700">e.g. GPT-4</text>
-
-  <!-- Left content -->
-  <text x="90" y="100" font-family="monospace" font-size="13" font-weight="700" fill="#10b981" letter-spacing="3">LARPER — ISSUE #003</text>
-
-  <text x="90" y="205" font-family="sans-serif" font-size="84" font-weight="900" fill="#18181b" letter-spacing="-3">Open vs.</text>
-  <text x="90" y="301" font-family="sans-serif" font-size="84" font-weight="900" fill="#18181b" letter-spacing="-3">Closed AI</text>
-
-  <rect x="90" y="333" width="60" height="3" rx="1.5" fill="#10b981"/>
-
-  <text x="90" y="381" font-family="sans-serif" font-size="22" fill="#71717a">What it means, and why it matters to you.</text>
-
-  <rect x="90" y="415" width="230" height="38" rx="19" fill="#10b981" fill-opacity="0.1"/>
-  <text x="205" y="439" font-family="monospace" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Buzzword: Open Source</text>
-
-  <text x="90" y="586" font-family="monospace" font-size="13" fill="#a1a1aa">March 31, 2026</text>
+  <rect x="610" y="95" width="190" height="440" rx="16" fill="#18181b"/>
+  <text x="705" y="140" font-family="monospace" font-size="11" fill="#52525b" text-anchor="middle" letter-spacing="2">CLOSED</text>
+  <rect x="670" y="190" width="70" height="55" rx="8" fill="none" stroke="#71717a" stroke-width="2.5"/>
+  <path d="M 690 190 Q 690 150 705 150 Q 725 150 725 190" fill="none" stroke="#71717a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="705" cy="223" r="6" fill="#71717a"/>
+  <text x="705" y="293" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ API only</text>
+  <text x="705" y="315" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ No weights</text>
+  <text x="705" y="337" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ Pay to use</text>
+  <text x="705" y="359" font-family="monospace" font-size="11" fill="#71717a" text-anchor="middle">✗ Black box</text>
+  <rect x="654" y="385" width="102" height="30" rx="8" fill="#27272a"/>
+  <text x="705" y="405" font-family="monospace" font-size="11" fill="#a1a1aa" text-anchor="middle" font-weight="700">e.g. GPT-4</text>
 </svg>

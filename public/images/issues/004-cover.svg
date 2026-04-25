@@ -4,47 +4,31 @@
       <stop offset="0%" style="stop-color:#fafafa"/>
       <stop offset="100%" style="stop-color:#f4f4f5"/>
     </linearGradient>
-    <linearGradient id="bar1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.9"/>
-      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.3"/>
-    </linearGradient>
-    <linearGradient id="bar2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.9"/>
-      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.3"/>
-    </linearGradient>
   </defs>
 
-  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Chart visual — right side -->
-  <!-- Chart container -->
-  <rect x="740" y="90" width="400" height="420" rx="16" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+  <rect x="390" y="80" width="420" height="430" rx="16" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
 
-  <!-- Chart label -->
-  <text x="760" y="125" font-family="monospace" font-size="11" fill="#a1a1aa" letter-spacing="2">ALPHA GENERATION — MODEL vs MARKET</text>
-  <line x1="760" y1="132" x2="1120" y2="132" stroke="#f4f4f5" stroke-width="1"/>
+  <text x="410" y="115" font-family="monospace" font-size="11" fill="#a1a1aa" letter-spacing="2">ALPHA GENERATION — MODEL vs MARKET</text>
+  <line x1="410" y1="122" x2="790" y2="122" stroke="#f4f4f5" stroke-width="1"/>
 
-  <!-- Horizontal grid lines -->
-  <line x1="760" y1="190" x2="1120" y2="190" stroke="#f4f4f5" stroke-width="1"/>
-  <line x1="760" y1="250" x2="1120" y2="250" stroke="#f4f4f5" stroke-width="1"/>
-  <line x1="760" y1="310" x2="1120" y2="310" stroke="#f4f4f5" stroke-width="1"/>
-  <line x1="760" y1="370" x2="1120" y2="370" stroke="#f4f4f5" stroke-width="1"/>
-  <line x1="760" y1="430" x2="1120" y2="430" stroke="#e4e4e7" stroke-width="1"/>
+  <line x1="410" y1="180" x2="790" y2="180" stroke="#f4f4f5" stroke-width="1"/>
+  <line x1="410" y1="240" x2="790" y2="240" stroke="#f4f4f5" stroke-width="1"/>
+  <line x1="410" y1="300" x2="790" y2="300" stroke="#f4f4f5" stroke-width="1"/>
+  <line x1="410" y1="360" x2="790" y2="360" stroke="#f4f4f5" stroke-width="1"/>
+  <line x1="410" y1="420" x2="790" y2="420" stroke="#e4e4e7" stroke-width="1"/>
 
-  <!-- Y-axis labels -->
-  <text x="754" y="194" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">+30%</text>
-  <text x="754" y="254" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">+20%</text>
-  <text x="754" y="314" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">+10%</text>
-  <text x="754" y="374" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">0%</text>
+  <text x="404" y="184" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">+30%</text>
+  <text x="404" y="244" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">+20%</text>
+  <text x="404" y="304" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">+10%</text>
+  <text x="404" y="364" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="end">0%</text>
 
-  <!-- Market baseline (flat, dashed) -->
-  <line x1="770" y1="370" x2="1120" y2="325" stroke="#d4d4d8" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="1125" y="329" font-family="monospace" font-size="10" fill="#a1a1aa">market</text>
+  <line x1="420" y1="360" x2="780" y2="315" stroke="#d4d4d8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="785" y="319" font-family="monospace" font-size="10" fill="#a1a1aa">market</text>
 
-  <!-- AI model line (upward trend) -->
   <polyline
-    points="770,400 835,365 900,320 965,270 1030,215 1095,170"
+    points="420,390 495,355 570,310 645,260 720,205 780,162"
     fill="none"
     stroke="#10b981"
     stroke-width="2.5"
@@ -52,44 +36,24 @@
     stroke-linejoin="round"
   />
 
-  <!-- Fill under AI line -->
   <polygon
-    points="770,400 835,365 900,320 965,270 1030,215 1095,170 1095,430 770,430"
+    points="420,390 495,355 570,310 645,260 720,205 780,162 780,420 420,420"
     fill="#10b981"
     fill-opacity="0.06"
   />
 
-  <!-- Dots on AI line -->
-  <circle cx="770" cy="400" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
-  <circle cx="835" cy="365" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
-  <circle cx="900" cy="320" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
-  <circle cx="965" cy="270" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
-  <circle cx="1030" cy="215" r="5" fill="#10b981" stroke="white" stroke-width="2"/>
-  <circle cx="1095" cy="170" r="5" fill="#10b981" stroke="white" stroke-width="2"/>
+  <circle cx="420" cy="390" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
+  <circle cx="495" cy="355" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
+  <circle cx="570" cy="310" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
+  <circle cx="645" cy="260" r="4" fill="white" stroke="#10b981" stroke-width="2"/>
+  <circle cx="720" cy="205" r="5" fill="#10b981" stroke="white" stroke-width="2"/>
+  <circle cx="780" cy="162" r="5" fill="#10b981" stroke="white" stroke-width="2"/>
 
-  <!-- AI line label -->
-  <rect x="1050" y="148" width="66" height="22" rx="6" fill="#10b981"/>
-  <text x="1083" y="163" font-family="monospace" font-size="10" fill="white" text-anchor="middle" font-weight="700">LangAlpha</text>
+  <rect x="737" y="140" width="66" height="22" rx="6" fill="#10b981"/>
+  <text x="770" y="155" font-family="monospace" font-size="10" fill="white" text-anchor="middle" font-weight="700">LangAlpha</text>
 
-  <!-- X axis labels -->
-  <text x="770" y="448" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Jan</text>
-  <text x="900" y="448" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Feb</text>
-  <text x="1030" y="448" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Mar</text>
-  <text x="1095" y="448" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Apr</text>
-
-  <!-- Left content -->
-  <text x="90" y="100" font-family="monospace" font-size="13" font-weight="700" fill="#10b981" letter-spacing="3">LARPER — ISSUE #004</text>
-
-  <text x="90" y="205" font-family="sans-serif" font-size="78" font-weight="900" fill="#18181b" letter-spacing="-3">Wall Street</text>
-  <text x="90" y="295" font-family="sans-serif" font-size="78" font-weight="900" fill="#18181b" letter-spacing="-3">Meets AI</text>
-
-  <rect x="90" y="328" width="60" height="3" rx="1.5" fill="#10b981"/>
-
-  <text x="90" y="378" font-family="sans-serif" font-size="20" fill="#71717a">What if Claude Code was built for</text>
-  <text x="90" y="404" font-family="sans-serif" font-size="20" fill="#71717a">Wall Street? Meet LangAlpha.</text>
-
-  <rect x="90" y="435" width="195" height="38" rx="19" fill="#10b981" fill-opacity="0.1"/>
-  <text x="187" y="459" font-family="monospace" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Buzzword: Quant</text>
-
-  <text x="90" y="586" font-family="monospace" font-size="13" fill="#a1a1aa">April 14, 2026</text>
+  <text x="420" y="438" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Jan</text>
+  <text x="570" y="438" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Feb</text>
+  <text x="720" y="438" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Mar</text>
+  <text x="780" y="438" font-family="monospace" font-size="10" fill="#a1a1aa" text-anchor="middle">Apr</text>
 </svg>
