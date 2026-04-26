@@ -26,7 +26,6 @@ export default function HomePage() {
             { label: "No prior knowledge needed", color: "text-emerald-500" },
             { label: "Every buzzword explained",  color: "text-amber-500" },
             { label: "Free forever",              color: "text-emerald-500" },
-            { label: "Student written",           color: "text-emerald-500" },
           ].map(({ label, color }, i) => (
             <span key={label} className={`animate-fade-in stagger-${i + 1} flex items-center gap-2`}>
               <span className={color}>✓</span>{label}
