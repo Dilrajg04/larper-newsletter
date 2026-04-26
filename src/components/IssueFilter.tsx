@@ -7,6 +7,7 @@ import type { IssueMeta } from "@/lib/issues";
 export default function IssueFilter({ issues }: { issues: IssueMeta[] }) {
   const [query, setQuery] = useState("");
   const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [order, setOrder] = useState<"desc" | "asc">("desc");
 
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -15,17 +16,19 @@ export default function IssueFilter({ issues }: { issues: IssueMeta[] }) {
   }, [issues]);
 
   const filtered = useMemo(() => {
-    return issues.filter((issue) => {
-      const matchesTag = activeTag ? issue.tags.includes(activeTag) : true;
-      const q = query.toLowerCase();
-      const matchesQuery = q
-        ? issue.title.toLowerCase().includes(q) ||
-          issue.description.toLowerCase().includes(q) ||
-          issue.tags.some((t) => t.toLowerCase().includes(q))
-        : true;
-      return matchesTag && matchesQuery;
-    });
-  }, [issues, query, activeTag]);
+    return issues
+      .filter((issue) => {
+        const matchesTag = activeTag ? issue.tags.includes(activeTag) : true;
+        const q = query.toLowerCase();
+        const matchesQuery = q
+          ? issue.title.toLowerCase().includes(q) ||
+            issue.description.toLowerCase().includes(q) ||
+            issue.tags.some((t) => t.toLowerCase().includes(q))
+          : true;
+        return matchesTag && matchesQuery;
+      })
+      .sort((a, b) => order === "desc" ? b.issue - a.issue : a.issue - b.issue);
+  }, [issues, query, activeTag, order]);
 
   return (
     <div>
@@ -54,8 +57,19 @@ export default function IssueFilter({ issues }: { issues: IssueMeta[] }) {
         )}
       </div>
 
-      {/* Tag pills */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      {/* Tag pills + sort toggle */}
+      <div className="flex flex-wrap items-center gap-2 mb-8">
+        <button
+          onClick={() => setOrder(order === "desc" ? "asc" : "desc")}
+          className="flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-full border bg-zinc-50 text-zinc-500 border-zinc-200 hover:border-zinc-400 transition-colors"
+        >
+          {order === "desc" ? (
+            <><span>↓</span> Newest first</>
+          ) : (
+            <><span>↑</span> Oldest first</>
+          )}
+        </button>
+        <span className="text-zinc-200 text-sm">|</span>
         <button
           onClick={() => setActiveTag(null)}
           className={`text-xs font-mono px-3 py-1 rounded-full border transition-colors ${
