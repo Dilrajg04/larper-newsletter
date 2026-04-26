@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="pt-20 pb-24 animate-slide-up">
         <p className="text-xs font-mono uppercase tracking-widest text-emerald-600 mb-6">
-          Free · 2 Issues Every Monday · Written for students
+          Free · Every Monday · Written for students
         </p>
         <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tighter text-zinc-900 mb-8 leading-none">
           LARPER
