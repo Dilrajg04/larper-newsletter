@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LARPER — AI & Tech for Students",
   description:
-    "Weekly AI and tech news explained simply. No jargon without an explanation. Free, every Monday.",
+    "2 issues every Monday. AI and tech news explained simply. No jargon without an explanation. Free.",
   openGraph: {
     title: "LARPER — AI & Tech for Students",
     description:
-      "Weekly AI and tech news explained simply. No jargon without an explanation. Free, every Monday.",
+      "2 issues every Monday. AI and tech news explained simply. No jargon without an explanation. Free.",
     type: "website",
   },
 };

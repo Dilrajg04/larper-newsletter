@@ -1,5 +1,5 @@
 import { getAllIssues } from "@/lib/issues";
-import IssueCard from "@/components/IssueCard";
+import IssueFilter from "@/components/IssueFilter";
 import SubscribeForm from "@/components/SubscribeForm";
 import DonateButton from "@/components/DonateButton";
 
@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="pt-20 pb-24 animate-slide-up">
         <p className="text-xs font-mono uppercase tracking-widest text-emerald-600 mb-6">
-          Free · Every Monday · Written for students
+          Free · 2 Issues Every Monday · Written for students
         </p>
         <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black tracking-tighter text-zinc-900 mb-8 leading-none">
           LARPER
@@ -21,7 +21,7 @@ export default function HomePage() {
           AI and tech news made simple. Every issue breaks down what&apos;s happening,
           explains the jargon, and gives you a clear starting point — no background required.
         </p>
-        <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-mono text-zinc-400">
+        <div className="flex flex-col gap-2 text-sm font-mono text-zinc-400">
           {[
             { label: "No prior knowledge needed", color: "text-emerald-500" },
             { label: "Every buzzword explained",  color: "text-amber-500" },
@@ -35,9 +35,12 @@ export default function HomePage() {
       </section>
 
       {/* Used by */}
-      <div className="flex flex-wrap items-center gap-6 mb-16 pb-16 border-b border-zinc-100">
-        <span className="text-xs font-mono uppercase tracking-widest text-zinc-400">Used by students at</span>
-        <span className="text-sm font-bold text-zinc-700 tracking-tight">UC San Diego</span>
+      <div className="flex flex-col gap-3 mb-16 pb-16 border-b border-zinc-100">
+        <span className="text-sm font-mono uppercase tracking-widest text-zinc-400">Used by students at</span>
+        <div className="flex flex-wrap gap-6">
+          <span className="text-xl font-black text-zinc-900 tracking-tight">UC San Diego</span>
+          <span className="text-xl font-black text-zinc-900 tracking-tight">USC</span>
+        </div>
       </div>
 
       {/* Divider */}
@@ -47,15 +50,9 @@ export default function HomePage() {
         <span className="text-xs font-mono text-zinc-400">{issues.length} published</span>
       </div>
 
-      {/* Issues grid */}
+      {/* Issues grid with search + tag filter */}
       <section className="mb-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16">
-          {issues.map((issue, i) => (
-            <div key={issue.slug} className={`animate-slide-up stagger-${Math.min(i + 1, 6)}`}>
-              <IssueCard issue={issue} />
-            </div>
-          ))}
-        </div>
+        <IssueFilter issues={issues} />
       </section>
 
       {/* Subscribe + Donate */}

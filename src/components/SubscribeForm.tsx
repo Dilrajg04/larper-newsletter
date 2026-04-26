@@ -42,7 +42,7 @@ export default function SubscribeForm() {
           Stay in the loop, for free
         </h2>
         <p className="text-emerald-800/60 text-sm mb-7 leading-relaxed">
-          Every Monday you get one issue: what happened in AI and tech this week,
+          Every Monday you get 2 issues: what happened in AI and tech this week,
           explained clearly with zero assumptions about what you already know.
         </p>
         {status === "success" ? (

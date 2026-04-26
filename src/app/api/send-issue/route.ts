@@ -156,7 +156,7 @@ function issueEmail({ issue, issueUrl, baseUrl }: { issue: Issue; issueUrl: stri
       <!-- Footer -->
       <tr><td style="padding:20px 36px;border-top:1px solid #e4e4e7;background:#fafafa;">
         <p style="margin:0;font-size:11px;color:#a1a1aa;font-family:monospace;line-height:1.8;">
-          LARPER · AI &amp; tech for students · Free, every Monday<br/>
+          LARPER · AI &amp; tech for students · 2 issues every Monday, free<br/>
           <a href="${baseUrl}/unsubscribe" style="color:#a1a1aa;text-decoration:underline;">Unsubscribe</a>
         </p>
       </td></tr>

@@ -87,8 +87,8 @@ function confirmationEmail(baseUrl: string): string {
               </p>
               <p style="margin:0 0 16px;font-size:16px;color:#3f3f46;line-height:1.7;">
                 Welcome to LARPER — the newsletter that makes AI and tech news actually make sense.
-                Every Monday you'll get one issue: clear explanations, no assumed knowledge,
-                and one buzzword broken down so you actually know what people are talking about.
+                Every Monday you'll get 2 issues: clear explanations, no assumed knowledge,
+                and a buzzword broken down so you actually know what people are talking about.
               </p>
               <p style="margin:0 0 28px;font-size:16px;color:#3f3f46;line-height:1.7;">
                 Your first issue arrives next Monday. Until then, check out what we've published so far.
@@ -118,7 +118,7 @@ function confirmationEmail(baseUrl: string): string {
           <tr>
             <td style="padding-top:32px;border-top:1px solid #e4e4e7;margin-top:32px;">
               <p style="margin:0;font-size:12px;color:#a1a1aa;font-family:monospace;">
-                LARPER · AI &amp; tech for students · Free, every Monday<br/>
+                LARPER · AI &amp; tech for students · 2 issues every Monday, free<br/>
                 You subscribed at larper.co.
                 <a href="${baseUrl}/unsubscribe" style="color:#a1a1aa;">Unsubscribe</a>
               </p>
