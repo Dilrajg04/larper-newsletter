@@ -12,8 +12,8 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
   });
 
   return (
-    <Link href={`/issues/${issue.slug}`} className="group block">
-      <article className="relative py-8 border-b border-zinc-100 transition-all duration-300 hover:-translate-y-0.5 pl-4">
+    <Link href={`/issues/${issue.slug}`} className="group block h-full">
+      <article className="relative flex flex-col h-full py-8 border-b border-zinc-100 transition-all duration-300 hover:-translate-y-0.5 pl-4">
 
         {/* Left accent bar — appears on hover */}
         <div className="absolute left-0 top-8 bottom-8 w-0.5 rounded-full bg-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -51,7 +51,7 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
         </p>
 
         {/* Footer row */}
-        <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center justify-between gap-4 mt-auto">
           <div className="flex flex-wrap gap-1.5">
             {issue.tags.slice(0, 3).map((tag) => (
               <span

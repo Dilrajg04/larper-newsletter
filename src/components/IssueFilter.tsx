@@ -103,7 +103,7 @@ export default function IssueFilter({ issues }: { issues: IssueMeta[] }) {
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-16">
           {filtered.map((issue, i) => (
-            <div key={issue.slug} className={`animate-slide-up stagger-${Math.min(i + 1, 6)}`}>
+            <div key={issue.slug} className={`animate-slide-up stagger-${Math.min(i + 1, 6)} h-full`}>
               <IssueCard issue={issue} />
             </div>
           ))}
