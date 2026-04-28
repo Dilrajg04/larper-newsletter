@@ -20,7 +20,7 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
 
         {/* Cover image */}
         {issue.coverImage && (
-          <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-zinc-100 shadow-sm mb-5">
+          <div className="relative w-full aspect-[3/2] sm:aspect-[4/3] rounded-xl overflow-hidden bg-zinc-100 shadow-sm mb-5">
             <Image
               src={issue.coverImage}
               alt={issue.title}

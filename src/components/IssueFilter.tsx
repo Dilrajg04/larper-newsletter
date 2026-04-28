@@ -58,10 +58,10 @@ export default function IssueFilter({ issues }: { issues: IssueMeta[] }) {
       </div>
 
       {/* Tag pills + sort toggle */}
-      <div className="flex flex-wrap items-center gap-2 mb-8">
+      <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-1 scrollbar-hide -mx-1 px-1">
         <button
           onClick={() => setOrder(order === "desc" ? "asc" : "desc")}
-          className="flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-full border bg-zinc-50 text-zinc-500 border-zinc-200 hover:border-zinc-400 transition-colors"
+          className="flex items-center gap-1.5 text-xs font-mono px-3 py-1 rounded-full border bg-zinc-50 text-zinc-500 border-zinc-200 hover:border-zinc-400 transition-colors shrink-0"
         >
           {order === "desc" ? (
             <><span>↓</span> Newest first</>
@@ -72,7 +72,7 @@ export default function IssueFilter({ issues }: { issues: IssueMeta[] }) {
         <span className="text-zinc-200 text-sm">|</span>
         <button
           onClick={() => setActiveTag(null)}
-          className={`text-xs font-mono px-3 py-1 rounded-full border transition-colors ${
+          className={`shrink-0 text-xs font-mono px-3 py-1 rounded-full border transition-colors ${
             activeTag === null
               ? "bg-zinc-900 text-white border-zinc-900"
               : "bg-zinc-50 text-zinc-500 border-zinc-200 hover:border-zinc-400"
@@ -84,7 +84,7 @@ export default function IssueFilter({ issues }: { issues: IssueMeta[] }) {
           <button
             key={tag}
             onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-            className={`text-xs font-mono px-3 py-1 rounded-full border transition-colors ${
+            className={`shrink-0 text-xs font-mono px-3 py-1 rounded-full border transition-colors ${
               activeTag === tag
                 ? "bg-emerald-500 text-white border-emerald-500"
                 : "bg-zinc-50 text-zinc-500 border-zinc-200 hover:border-emerald-400 hover:text-emerald-600"

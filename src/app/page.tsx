@@ -12,7 +12,7 @@ export default function HomePage() {
     <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
       {/* Hero */}
-      <section className="pt-20 pb-24 animate-slide-up">
+      <section className="pt-12 sm:pt-20 pb-16 sm:pb-24 animate-slide-up">
         <p className="text-xs font-mono uppercase tracking-widest text-emerald-600 mb-6">
           Free · Every Monday · Written for students
         </p>
