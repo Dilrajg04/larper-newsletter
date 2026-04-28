@@ -3,7 +3,7 @@ slug: 005-gpt5-super-app
 title: "GPT-5 Is Here: AI Just Became a Super App"
 date: "2026-04-28"
 issue: 5
-description: "OpenAI just released GPT-5, and it's not just a smarter chatbot — it's a single app that can chat, code, browse, and generate images all at once. We break down what that actually means and why it matters for you."
+description: "OpenAI just released GPT-5, and it's not just a smarter chatbot — it's a single app that can chat, code, browse, and generate images all at once. It reasons better, handles agents across Slack and Gmail, and is designed to replace every AI tool you currently juggle. We break down what's actually new, what's still paywalled, and why the skill that matters now isn't using AI — it's directing it well."
 tags: ["GPT-5", "OpenAI", "beginner", "AI tools", "multimodal"]
 coverImage: "/images/issues/005-cover.svg"
 shortTitle: "GPT-5"
