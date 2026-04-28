@@ -46,9 +46,12 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
         </h2>
 
         {/* Description */}
-        <p className="text-base text-zinc-500 line-clamp-4 leading-relaxed mb-4">
-          {issue.description}
-        </p>
+        <div className="relative flex-1 overflow-hidden mb-4 min-h-[4rem]">
+          <p className="text-base text-zinc-500 leading-relaxed">
+            {issue.description}
+          </p>
+          <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+        </div>
 
         {/* Footer row */}
         <div className="flex items-center justify-between gap-4 mt-auto">
