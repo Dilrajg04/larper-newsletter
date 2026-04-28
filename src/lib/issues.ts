@@ -22,6 +22,7 @@ export interface Issue {
   buzzword: Buzzword;
   coverImage?: string;
   shortTitle?: string;
+  type?: "deep-dive" | "roundup";
   contentHtml: string;
 }
 
@@ -35,6 +36,7 @@ export interface IssueMeta {
   buzzword: Buzzword;
   coverImage?: string;
   shortTitle?: string;
+  type?: "deep-dive" | "roundup";
 }
 
 export function getAllIssues(): IssueMeta[] {

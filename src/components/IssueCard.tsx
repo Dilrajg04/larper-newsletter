@@ -37,6 +37,11 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
           <span className="text-xs font-mono font-bold text-white bg-emerald-500 px-2 py-0.5 rounded-md">
             #{String(issue.issue).padStart(3, "0")}
           </span>
+          {issue.type === "roundup" && (
+            <span className="text-xs font-mono font-bold text-white bg-violet-500 px-2 py-0.5 rounded-md">
+              Weekly Roundup
+            </span>
+          )}
           <span className="text-xs text-zinc-400 font-mono">{formatted}</span>
         </div>
 
