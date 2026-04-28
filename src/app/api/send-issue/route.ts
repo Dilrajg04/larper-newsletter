@@ -76,11 +76,66 @@ interface Issue {
   description: string;
   date: string;
   tags: string[];
+  type?: "deep-dive" | "roundup";
   buzzword: { term: string; definition: string; examples: string[] };
   contentHtml: string;
 }
 
 function issueEmail({ issue, issueUrl, baseUrl }: { issue: Issue; issueUrl: string; baseUrl: string }): string {
+  return issue.type === "roundup"
+    ? roundupEmail({ issue, issueUrl, baseUrl })
+    : deepDiveEmail({ issue, issueUrl, baseUrl });
+}
+
+function emailShell({ title, baseUrl, body }: { title: string; baseUrl: string; body: string }): string {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>${title}</title>
+</head>
+<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;">
+  <tr><td align="center" style="padding:32px 16px;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e4e4e7;">
+
+      <!-- Header -->
+      <tr><td style="padding:28px 36px;border-bottom:1px solid #e4e4e7;">
+        <a href="${baseUrl}" style="text-decoration:none;">
+          <span style="font-size:24px;font-weight:900;letter-spacing:-1px;color:#111111;">LARPER</span>
+          <span style="font-size:10px;color:#71717a;font-family:monospace;margin-left:8px;">/AI & TECH FOR STUDENTS</span>
+        </a>
+      </td></tr>
+
+      ${body}
+
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>`;
+}
+
+function emailFooter({ issueUrl, baseUrl }: { issueUrl: string; baseUrl: string }): string {
+  return `
+      <!-- CTA -->
+      <tr><td style="padding:0 36px 36px;">
+        <a href="${issueUrl}" style="display:inline-block;background:#111111;color:#ffffff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;">
+          Read on larper.co →
+        </a>
+      </td></tr>
+
+      <!-- Footer -->
+      <tr><td style="padding:20px 36px;border-top:1px solid #e4e4e7;background:#fafafa;">
+        <p style="margin:0;font-size:11px;color:#a1a1aa;font-family:monospace;line-height:1.8;">
+          LARPER · AI &amp; tech for students · every Monday, free<br/>
+          <a href="${baseUrl}/unsubscribe" style="color:#a1a1aa;text-decoration:underline;">Unsubscribe</a>
+        </p>
+      </td></tr>`;
+}
+
+function deepDiveEmail({ issue, issueUrl, baseUrl }: { issue: Issue; issueUrl: string; baseUrl: string }): string {
   const formatted = new Date(issue.date).toLocaleDateString("en-US", {
     year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
   });
@@ -93,26 +148,7 @@ function issueEmail({ issue, issueUrl, baseUrl }: { issue: Issue; issueUrl: stri
     `<p style="margin:0 0 10px;padding-left:12px;border-left:2px solid #fde68a;font-style:italic;color:#52525b;font-size:14px;line-height:1.7;">"${ex}"</p>`
   ).join("");
 
-  return `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>${issue.title}</title>
-</head>
-<body style="margin:0;padding:0;background:#f9fafb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;">
-  <tr><td align="center" style="padding:32px 16px;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e4e4e7;">
-
-      <!-- Header -->
-      <tr><td style="padding:28px 36px;border-bottom:1px solid #e4e4e7;background:#ffffff;">
-        <a href="${baseUrl}" style="text-decoration:none;">
-          <span style="font-size:24px;font-weight:900;letter-spacing:-1px;color:#111111;">LARPER</span>
-          <span style="font-size:10px;color:#71717a;font-family:monospace;margin-left:8px;">/AI & TECH FOR STUDENTS</span>
-        </a>
-      </td></tr>
-
+  const body = `
       <!-- Issue label -->
       <tr><td style="padding:28px 36px 0;">
         <p style="margin:0 0 6px;font-size:11px;font-family:monospace;text-transform:uppercase;letter-spacing:2px;color:#059669;">
@@ -144,26 +180,61 @@ function issueEmail({ issue, issueUrl, baseUrl }: { issue: Issue; issueUrl: stri
         ${issue.contentHtml}
       </td></tr>
 
-      <!-- CTA -->
-      <tr><td style="padding:0 36px 36px;">
-        <a href="${issueUrl}"
-           style="display:inline-block;background:#111111;color:#ffffff;font-size:14px;font-weight:700;
-                  padding:12px 24px;border-radius:8px;text-decoration:none;">
-          Read on larper.co →
-        </a>
+      ${emailFooter({ issueUrl, baseUrl })}`;
+
+  return emailShell({ title: issue.title, baseUrl, body });
+}
+
+function roundupEmail({ issue, issueUrl, baseUrl }: { issue: Issue; issueUrl: string; baseUrl: string }): string {
+  const formatted = new Date(issue.date).toLocaleDateString("en-US", {
+    year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
+  });
+
+  const examples = issue.buzzword.examples.map((ex) =>
+    `<p style="margin:0 0 10px;padding-left:12px;border-left:2px solid #ddd6fe;font-style:italic;color:#52525b;font-size:14px;line-height:1.7;">"${ex}"</p>`
+  ).join("");
+
+  const body = `
+      <!-- Roundup banner -->
+      <tr><td style="padding:0;">
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#18181b;">
+          <tr><td style="padding:18px 36px;">
+            <span style="display:inline-block;background:#7c3aed;color:#ffffff;font-family:monospace;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:10px;">Weekly Roundup</span>
+            <p style="margin:0;font-size:11px;font-family:monospace;color:#a1a1aa;text-transform:uppercase;letter-spacing:2px;">
+              Issue #${String(issue.issue).padStart(3, "0")} · ${formatted}
+            </p>
+          </td></tr>
+        </table>
       </td></tr>
 
-      <!-- Footer -->
-      <tr><td style="padding:20px 36px;border-top:1px solid #e4e4e7;background:#fafafa;">
-        <p style="margin:0;font-size:11px;color:#a1a1aa;font-family:monospace;line-height:1.8;">
-          LARPER · AI &amp; tech for students · every Monday, free<br/>
-          <a href="${baseUrl}/unsubscribe" style="color:#a1a1aa;text-decoration:underline;">Unsubscribe</a>
-        </p>
+      <!-- Title + description -->
+      <tr><td style="padding:28px 36px 0;">
+        <h1 style="margin:0 0 14px;font-size:24px;font-weight:900;color:#111111;line-height:1.3;">${issue.title}</h1>
+        <p style="margin:0 0 24px;font-size:15px;color:#3f3f46;line-height:1.7;">${issue.description}</p>
       </td></tr>
 
-    </table>
-  </td></tr>
-</table>
-</body>
-</html>`;
+      <!-- Divider -->
+      <tr><td style="padding:0 36px;"><hr style="border:none;border-top:1px solid #e4e4e7;margin:0 0 28px;"/></td></tr>
+
+      <!-- Stories -->
+      <tr><td style="padding:0 36px 28px;font-size:15px;color:#27272a;line-height:1.8;">
+        ${issue.contentHtml}
+      </td></tr>
+
+      <!-- Buzzword spotlight -->
+      <tr><td style="padding:0 36px 28px;">
+        <table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;">
+          <tr><td style="padding:22px 24px;">
+            <p style="margin:0 0 8px;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:2px;color:#7c3aed;">🔍 Buzzword Spotlight</p>
+            <p style="margin:0 0 10px;font-size:20px;font-weight:900;color:#7c3aed;line-height:1.2;">${issue.buzzword.term}</p>
+            <p style="margin:0 0 16px;font-size:14px;color:#3f3f46;line-height:1.7;">${issue.buzzword.definition}</p>
+            <p style="margin:0 0 10px;font-size:10px;font-family:monospace;text-transform:uppercase;letter-spacing:2px;color:#7c3aed;">You might hear it like this:</p>
+            ${examples}
+          </td></tr>
+        </table>
+      </td></tr>
+
+      ${emailFooter({ issueUrl, baseUrl })}`;
+
+  return emailShell({ title: issue.title, baseUrl, body });
 }
