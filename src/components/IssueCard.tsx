@@ -46,7 +46,7 @@ export default function IssueCard({ issue }: { issue: IssueMeta }) {
         </h2>
 
         {/* Description */}
-        <p className="text-base text-zinc-500 line-clamp-3 leading-relaxed mb-4">
+        <p className="text-base text-zinc-500 line-clamp-4 leading-relaxed mb-4">
           {issue.description}
         </p>
 
