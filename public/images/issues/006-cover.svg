@@ -8,51 +8,39 @@
 
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <!-- Header bar — within safe zone x=200–1000 -->
-  <rect x="200" y="52" width="800" height="52" rx="10" fill="#18181b"/>
-  <text x="600" y="83" font-family="monospace" font-size="16" font-weight="900" fill="white" text-anchor="middle" letter-spacing="3">WEEKLY ROUNDUP — APR 28, 2026</text>
+  <!-- Header bar -->
+  <rect x="200" y="44" width="800" height="50" rx="10" fill="#18181b"/>
+  <text x="600" y="75" font-family="monospace" font-size="15" font-weight="900" fill="white" text-anchor="middle" letter-spacing="3">WEEKLY ROUNDUP — APR 28, 2026</text>
 
-  <!-- Story 1: Geopolitics — left top -->
-  <rect x="210" y="124" width="370" height="180" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
-  <rect x="210" y="124" width="370" height="7" rx="10" fill="#ef4444"/>
-  <text x="230" y="158" font-family="monospace" font-size="10" font-weight="700" fill="#ef4444" letter-spacing="1">GEOPOLITICS</text>
-  <text x="230" y="180" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">China Blocks Meta's</text>
-  <text x="230" y="198" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">Manus AI Acquisition</text>
-  <text x="230" y="222" font-family="monospace" font-size="10" fill="#71717a">Beijing blocks US tech from buying</text>
-  <text x="230" y="238" font-family="monospace" font-size="10" fill="#71717a">Chinese AI startup Manus as rivalry</text>
-  <text x="230" y="254" font-family="monospace" font-size="10" fill="#71717a">between US and China intensifies.</text>
-  <text x="230" y="292" font-family="monospace" font-size="9" fill="#a1a1aa">Al Jazeera · 1 day ago</text>
+  <!-- Story 1: Geopolitics -->
+  <rect x="210" y="114" width="780" height="100" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+  <rect x="210" y="114" width="6" height="100" rx="3" fill="#ef4444"/>
+  <text x="232" y="142" font-family="monospace" font-size="10" font-weight="700" fill="#ef4444" letter-spacing="1">GEOPOLITICS</text>
+  <text x="232" y="163" font-family="monospace" font-size="14" font-weight="900" fill="#18181b">China Blocks Meta's Manus AI Acquisition</text>
+  <text x="232" y="183" font-family="monospace" font-size="11" fill="#71717a">Beijing steps in to stop US tech from buying Chinese AI startup as rivalry intensifies.</text>
+  <text x="232" y="202" font-family="monospace" font-size="9" fill="#a1a1aa">Al Jazeera · 1 day ago</text>
 
-  <!-- Story 2: Startups — right top -->
-  <rect x="620" y="124" width="370" height="180" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
-  <rect x="620" y="124" width="370" height="7" rx="10" fill="#f59e0b"/>
-  <text x="640" y="158" font-family="monospace" font-size="10" font-weight="700" fill="#f59e0b" letter-spacing="1">STARTUPS</text>
-  <text x="640" y="180" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">Big Tech Staff Are Leaving</text>
-  <text x="640" y="198" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">to Build AI Startups</text>
-  <text x="640" y="222" font-family="monospace" font-size="10" fill="#71717a">Ex-Meta, Google &amp; OpenAI employees</text>
-  <text x="640" y="238" font-family="monospace" font-size="10" fill="#71717a">are raising hundreds of millions</text>
-  <text x="640" y="254" font-family="monospace" font-size="10" fill="#71717a">within months of launching.</text>
-  <text x="640" y="292" font-family="monospace" font-size="9" fill="#a1a1aa">CNBC · 17 hours ago</text>
+  <!-- Story 2: Startups -->
+  <rect x="210" y="226" width="780" height="100" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+  <rect x="210" y="226" width="6" height="100" rx="3" fill="#f59e0b"/>
+  <text x="232" y="254" font-family="monospace" font-size="10" font-weight="700" fill="#f59e0b" letter-spacing="1">STARTUPS</text>
+  <text x="232" y="275" font-family="monospace" font-size="14" font-weight="900" fill="#18181b">Big Tech Staff Are Leaving to Build AI Startups</text>
+  <text x="232" y="295" font-family="monospace" font-size="11" fill="#71717a">Ex-Meta, Google &amp; OpenAI employees raising hundreds of millions within months.</text>
+  <text x="232" y="314" font-family="monospace" font-size="9" fill="#a1a1aa">CNBC · 17 hours ago</text>
 
-  <!-- Story 3: Deep Tech — left bottom -->
-  <rect x="210" y="324" width="370" height="180" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
-  <rect x="210" y="324" width="370" height="7" rx="10" fill="#8b5cf6"/>
-  <text x="230" y="358" font-family="monospace" font-size="10" font-weight="700" fill="#8b5cf6" letter-spacing="1">DEEP TECH</text>
-  <text x="230" y="380" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">Mind-Reading Headphones</text>
-  <text x="230" y="398" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">Coming to Consumers</text>
-  <text x="230" y="422" font-family="monospace" font-size="10" fill="#71717a">Neurable licenses non-invasive BCI</text>
-  <text x="230" y="438" font-family="monospace" font-size="10" fill="#71717a">tech for everyday wearables —</text>
-  <text x="230" y="454" font-family="monospace" font-size="10" fill="#71717a">no surgery required.</text>
-  <text x="230" y="492" font-family="monospace" font-size="9" fill="#a1a1aa">TechCrunch · 8 hours ago</text>
+  <!-- Story 3: Deep Tech -->
+  <rect x="210" y="338" width="780" height="100" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+  <rect x="210" y="338" width="6" height="100" rx="3" fill="#8b5cf6"/>
+  <text x="232" y="366" font-family="monospace" font-size="10" font-weight="700" fill="#8b5cf6" letter-spacing="1">DEEP TECH</text>
+  <text x="232" y="387" font-family="monospace" font-size="14" font-weight="900" fill="#18181b">Mind-Reading Headphones Coming to Consumers</text>
+  <text x="232" y="407" font-family="monospace" font-size="11" fill="#71717a">Neurable licenses non-invasive BCI tech for everyday wearables — no surgery needed.</text>
+  <text x="232" y="426" font-family="monospace" font-size="9" fill="#a1a1aa">TechCrunch · 8 hours ago</text>
 
-  <!-- Story 4: Funding — right bottom -->
-  <rect x="620" y="324" width="370" height="180" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
-  <rect x="620" y="324" width="370" height="7" rx="10" fill="#10b981"/>
-  <text x="640" y="358" font-family="monospace" font-size="10" font-weight="700" fill="#10b981" letter-spacing="1">FUNDING</text>
-  <text x="640" y="380" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">Tamber Raises $5M for</text>
-  <text x="640" y="398" font-family="monospace" font-size="13" font-weight="900" fill="#18181b">AI Music Tool</text>
-  <text x="640" y="422" font-family="monospace" font-size="10" fill="#71717a">Adobe Ventures backs LA startup</text>
-  <text x="640" y="438" font-family="monospace" font-size="10" fill="#71717a">building AI music tech designed to</text>
-  <text x="640" y="454" font-family="monospace" font-size="10" fill="#71717a">extend — not replace — artists.</text>
-  <text x="640" y="492" font-family="monospace" font-size="9" fill="#a1a1aa">Music Business Worldwide · 11 hours ago</text>
+  <!-- Story 4: Funding -->
+  <rect x="210" y="450" width="780" height="100" rx="10" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+  <rect x="210" y="450" width="6" height="100" rx="3" fill="#10b981"/>
+  <text x="232" y="478" font-family="monospace" font-size="10" font-weight="700" fill="#10b981" letter-spacing="1">FUNDING</text>
+  <text x="232" y="499" font-family="monospace" font-size="14" font-weight="900" fill="#18181b">Tamber Raises $5M for AI Music Tool</text>
+  <text x="232" y="519" font-family="monospace" font-size="11" fill="#71717a">Adobe Ventures backs LA startup building AI music tech to extend — not replace — artists.</text>
+  <text x="232" y="538" font-family="monospace" font-size="9" fill="#a1a1aa">Music Business Worldwide · 11 hours ago</text>
 </svg>
