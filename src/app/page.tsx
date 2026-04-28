@@ -2,6 +2,8 @@ import { getAllIssues } from "@/lib/issues";
 import IssueFilter from "@/components/IssueFilter";
 import SubscribeForm from "@/components/SubscribeForm";
 import DonateButton from "@/components/DonateButton";
+import BuzzwordSpotlight from "@/components/BuzzwordSpotlight";
+import Link from "next/link";
 
 export default function HomePage() {
   const issues = getAllIssues();
@@ -41,6 +43,17 @@ export default function HomePage() {
           <span className="text-xl font-black text-zinc-900 tracking-tight">UC San Diego</span>
           <span className="text-xl font-black text-zinc-900 tracking-tight">USC</span>
         </div>
+      </div>
+
+      {/* Buzzword of the Week */}
+      <div className="mb-16 pb-16 border-b border-zinc-100">
+        <div className="flex items-center justify-between mb-5">
+          <span className="text-xs font-mono uppercase tracking-widest text-zinc-400">Buzzword of the Week</span>
+          <Link href={`/issues/${issues[0].slug}`} className="text-xs font-mono text-zinc-400 hover:text-zinc-700 transition-colors">
+            from issue #{String(issues[0].issue).padStart(3, "0")} →
+          </Link>
+        </div>
+        <BuzzwordSpotlight buzzword={issues[0].buzzword} />
       </div>
 
       {/* Divider */}
