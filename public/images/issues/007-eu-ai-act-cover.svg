@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fafafa"/>
+      <stop offset="100%" style="stop-color:#f4f4f5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- RIGHT COLUMN: Compliance card -->
+  <rect x="755" y="90" width="385" height="445" rx="16" fill="white" stroke="#e4e4e7" stroke-width="1.5"/>
+
+  <!-- Deadline label -->
+  <text x="947" y="132" font-family="monospace" font-size="11" font-weight="700" fill="#ef4444" text-anchor="middle" letter-spacing="2">DEADLINE</text>
+
+  <!-- Date -->
+  <text x="947" y="167" font-family="sans-serif" font-size="32" font-weight="900" fill="#18181b" text-anchor="middle" letter-spacing="-1">AUG 2, 2026</text>
+
+  <!-- Divider -->
+  <line x1="775" y1="186" x2="1120" y2="186" stroke="#e4e4e7" stroke-width="1"/>
+
+  <!-- Checklist item 1: done (emerald) -->
+  <rect x="776" y="200" width="22" height="22" rx="4" fill="#10b981" fill-opacity="0.15"/>
+  <text x="787" y="215" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle" font-weight="700">✓</text>
+  <text x="808" y="216" font-family="sans-serif" font-size="14" fill="#18181b">Classify AI systems</text>
+
+  <!-- Checklist item 2: done (emerald) -->
+  <rect x="776" y="234" width="22" height="22" rx="4" fill="#10b981" fill-opacity="0.15"/>
+  <text x="787" y="249" font-family="monospace" font-size="11" fill="#10b981" text-anchor="middle" font-weight="700">✓</text>
+  <text x="808" y="250" font-family="sans-serif" font-size="14" fill="#18181b">Risk assessment</text>
+
+  <!-- Checklist item 3: pending (amber) -->
+  <rect x="776" y="268" width="22" height="22" rx="4" fill="#f59e0b" fill-opacity="0.15"/>
+  <text x="787" y="283" font-family="monospace" font-size="11" fill="#f59e0b" text-anchor="middle" font-weight="700">!</text>
+  <text x="808" y="284" font-family="sans-serif" font-size="14" fill="#71717a">Conformity assessment</text>
+
+  <!-- Checklist item 4: pending (amber) -->
+  <rect x="776" y="302" width="22" height="22" rx="4" fill="#f59e0b" fill-opacity="0.15"/>
+  <text x="787" y="317" font-family="monospace" font-size="11" fill="#f59e0b" text-anchor="middle" font-weight="700">!</text>
+  <text x="808" y="318" font-family="sans-serif" font-size="14" fill="#71717a">Technical documentation</text>
+
+  <!-- Checklist item 5: not started (gray) -->
+  <rect x="776" y="336" width="22" height="22" rx="4" fill="#e4e4e7"/>
+  <text x="787" y="351" font-family="monospace" font-size="11" fill="#a1a1aa" text-anchor="middle" font-weight="700">○</text>
+  <text x="808" y="352" font-family="sans-serif" font-size="14" fill="#a1a1aa">EU system registration</text>
+
+  <!-- Divider before fine section -->
+  <line x1="775" y1="372" x2="1120" y2="372" stroke="#e4e4e7" stroke-width="1"/>
+
+  <!-- Fine section -->
+  <text x="947" y="398" font-family="monospace" font-size="11" fill="#a1a1aa" text-anchor="middle" letter-spacing="1">MAXIMUM PENALTY</text>
+  <text x="947" y="436" font-family="sans-serif" font-size="34" font-weight="900" fill="#ef4444" text-anchor="middle" letter-spacing="-1">€35M or 7%</text>
+  <text x="947" y="462" font-family="sans-serif" font-size="14" fill="#71717a" text-anchor="middle">of global annual revenue</text>
+  <text x="947" y="482" font-family="sans-serif" font-size="13" fill="#a1a1aa" text-anchor="middle">(whichever is higher)</text>
+  <text x="947" y="507" font-family="sans-serif" font-size="13" fill="#71717a" text-anchor="middle">= up to $24.5B for Google</text>
+
+  <!-- LEFT COLUMN -->
+
+  <!-- LARPER label -->
+  <text x="90" y="100" font-family="monospace" font-size="13" font-weight="700" fill="#10b981" letter-spacing="3">LARPER</text>
+
+  <!-- Title -->
+  <text x="90" y="210" font-family="sans-serif" font-size="84" font-weight="900" fill="#18181b" letter-spacing="-3">The EU Is</text>
+  <text x="90" y="306" font-family="sans-serif" font-size="84" font-weight="900" fill="#18181b" letter-spacing="-3">Coming for AI</text>
+
+  <!-- Emerald divider bar -->
+  <rect x="90" y="338" width="60" height="3" rx="1.5" fill="#10b981"/>
+
+  <!-- Subtitle -->
+  <text x="90" y="387" font-family="sans-serif" font-size="21" fill="#71717a">August 2026 — The compliance clock is running.</text>
+
+  <!-- Buzzword pill -->
+  <rect x="90" y="420" width="282" height="38" rx="19" fill="#10b981" fill-opacity="0.1"/>
+  <text x="231" y="444" font-family="monospace" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">Buzzword: Conformity Assessment</text>
+
+  <!-- Date -->
+  <text x="90" y="586" font-family="monospace" font-size="13" fill="#a1a1aa">May 5, 2026</text>
+</svg>
