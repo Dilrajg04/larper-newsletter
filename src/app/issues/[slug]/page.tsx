@@ -36,6 +36,8 @@ export default async function IssuePage({ params }: Props) {
     notFound();
   }
 
+  if (issue.draft) notFound();
+
   const formatted = new Date(issue.date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",

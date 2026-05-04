@@ -8,6 +8,7 @@ description: "The EU's AI enforcement deadline hits August 2 — and most US com
 tags: ["regulation", "EU AI Act", "compliance", "venture capital", "SpaceX", "xAI"]
 coverImage: "/images/issues/007-eu-ai-act-cover.svg"
 shortTitle: "EU AI Act"
+draft: true
 buzzword:
   term: "Conformity Assessment"
   definition: "A formal process where a company proves — on paper and in practice — that its AI system meets specific safety and transparency requirements before it can be used in the EU. Think of it like a building inspection, but for software: before you can open the doors, an auditor checks that the wiring is up to code. For AI, that means documenting how the model was trained, how it makes decisions, what it was tested for, and how humans stay in the loop."

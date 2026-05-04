@@ -11,7 +11,7 @@ export default async function AdminPage() {
   const [hnStories, guardianNews, issues] = await Promise.all([
     fetchHNStories(30),
     fetchGuardianNews(20),
-    Promise.resolve(getAllIssues()),
+    Promise.resolve(getAllIssues(true)),
   ]);
 
   const hasGuardian = !!process.env.GUARDIAN_API_KEY;

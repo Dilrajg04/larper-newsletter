@@ -23,6 +23,7 @@ export interface Issue {
   coverImage?: string;
   shortTitle?: string;
   type?: "deep-dive" | "roundup";
+  draft?: boolean;
   contentHtml: string;
 }
 
@@ -37,9 +38,10 @@ export interface IssueMeta {
   coverImage?: string;
   shortTitle?: string;
   type?: "deep-dive" | "roundup";
+  draft?: boolean;
 }
 
-export function getAllIssues(): IssueMeta[] {
+export function getAllIssues(includeDrafts = false): IssueMeta[] {
   const fileNames = fs.readdirSync(issuesDirectory);
   const allIssues = fileNames
     .filter((f) => f.endsWith(".md"))
@@ -52,7 +54,8 @@ export function getAllIssues(): IssueMeta[] {
         slug,
         ...(data as Omit<IssueMeta, "slug">),
       };
-    });
+    })
+    .filter((issue) => includeDrafts || !issue.draft);
 
   return allIssues.sort((a, b) => b.issue - a.issue);
 }
@@ -76,5 +79,10 @@ export function getAllSlugs(): string[] {
   return fs
     .readdirSync(issuesDirectory)
     .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
+    .map((f) => f.replace(/\.md$/, ""))
+    .filter((slug) => {
+      const fullPath = path.join(issuesDirectory, `${slug}.md`);
+      const { data } = matter(fs.readFileSync(fullPath, "utf8"));
+      return !data.draft;
+    });
 }
